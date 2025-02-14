@@ -184,16 +184,6 @@ function getRankFromValue(value) {
     const valueRanks = { 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: 'T', 11: 'J', 12: 'Q', 13: 'K', 14: 'A' };
     return valueRanks[value];
 }
-document.getElementById('pokerForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    const playerCards = document.getElementById('playerCards').value.split(',').map(card => card.trim());
-    const tableCards = document.getElementById('tableCards').value.split(',').map(card => card.trim());
-    const numPlayers = parseInt(document.getElementById('numPlayers').value, 10);
-
-    const probability = calculateWinProbability(playerCards, tableCards, numPlayers);
-    document.getElementById('result').innerText =`Win Probability: ${probability.toFixed(2)}%`;
-});
 // Обработчики для кнопок удаления
 document.querySelectorAll('.clear-button').forEach(button => {
     button.addEventListener('click', function() {
