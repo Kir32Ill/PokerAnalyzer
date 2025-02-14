@@ -194,3 +194,23 @@ document.getElementById('pokerForm').addEventListener('submit', function(event) 
     const probability = calculateWinProbability(playerCards, tableCards, numPlayers);
     document.getElementById('result').innerText =`Win Probability: ${probability.toFixed(2)}%`;
 });
+// Обработчики для кнопок удаления
+document.querySelectorAll('.clear-button').forEach(button => {
+    button.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target'); // Получаем ID поля ввода
+        const inputField = document.getElementById(targetId); // Находим поле ввода
+        inputField.value = ''; // Очищаем поле ввода
+    });
+});
+
+// Остальной код (calculateWinProbability и другие функции) остаётся без изменений
+document.getElementById('pokerForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const playerCards = document.getElementById('playerCards').value.split(',').map(card => card.trim());
+    const tableCards = document.getElementById('tableCards').value.split(',').map(card => card.trim());
+    const numPlayers = parseInt(document.getElementById('numPlayers').value, 10);
+
+    const probability = calculateWinProbability(playerCards, tableCards, numPlayers);
+    document.getElementById('result').innerText = `Win Probability: ${probability.toFixed(2)}%`;
+});

@@ -11,13 +11,28 @@
         <h1>Poker Win Probability Calculator</h1>
         <form id="pokerForm">
             <label for="playerCards">Your Cards (comma separated, e.g., AH,KD):</label>
-            <input type="text" id="playerCards" name="playerCards" required>
+            <div class="input-container">
+                <input type="text" id="playerCards" name="playerCards" required>
+                <button type="button" class="clear-button" data-target="playerCards">
+                    <img src="jpgs/chum_bucket.png" alt="Clear">
+                </button>
+            </div>
 
             <label for="tableCards">Table Cards (comma separated, e.g., 7C,8S,9D):</label>
-            <input type="text" id="tableCards" name="tableCards">
+            <div class="input-container">
+                <input type="text" id="tableCards" name="tableCards">
+                <button type="button" class="clear-button" data-target="tableCards">
+                    <img src="jpgs/chum_bucket.png" alt="Clear">
+                </button>
+            </div>
 
             <label for="numPlayers">Number of Players:</label>
-            <input type="number" id="numPlayers" name="numPlayers" required>
+            <div class="input-container">
+                <input type="number" id="numPlayers" name="numPlayers" required>
+                <button type="button" class="clear-button" data-target="numPlayers">
+                    <img src="jpgs/chum_bucket.png" alt="Clear">
+                </button>
+            </div>
 
             <button type="submit">Calculate Probability</button>
         </form>
