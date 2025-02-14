@@ -21,6 +21,8 @@ body {
     width: 100%;
     text-align: center;
     margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right:1rem;
 }
 
 
@@ -44,6 +46,7 @@ label {
     color: #34495e;
     text-align: left;
 }
+
 
 input[type="text"],
 input[type="number"] {
@@ -71,7 +74,6 @@ button:hover {
     background-color: #2980b9;
 }
 
-
 #result {
     margin-top: 1.5rem;
     font-size: 1.2rem;
@@ -84,7 +86,7 @@ button:hover {
     position: fixed;
     right: 2rem;
     bottom: 2rem;
-    max-width: 300px;
+    max-width: 400px;
     width: 100%;
     text-align: center;
 }
@@ -95,22 +97,27 @@ button:hover {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1430px) {
     .container {
         margin: 1rem;
-        padding: 1rem;
+        padding: 1.5rem;
+        max-width: 80%;
+    }
+
+    h1 {
+        font-size: 1.5rem; 
     }
 
     .images {
-        position: static;
+        position: static; 
         margin-top: 2rem;
-        max-width: 100%;
+        max-width: 100%; 
     }
 }
+
 
 .input-container {
     display: flex;
@@ -119,7 +126,7 @@ button:hover {
     width: 100%;
 }
 
-/* Стили для кнопки удаления */
+
 .clear-button {
     background: none;
     border: none;
