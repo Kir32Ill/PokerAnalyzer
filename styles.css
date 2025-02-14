@@ -22,6 +22,8 @@ body {
     width: 100%;
     text-align: center;
     margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right:1rem;
 }
 
 /* Заголовок */
@@ -100,7 +102,7 @@ button:hover {
 }
 
 /* Адаптивность для мобильных устройств */
-@media (max-width: 768px) {
+@media (max-width: 1230px) {
     .container {
         margin: 1rem;
         padding: 1.5rem; /* Уменьшаем отступы внутри контейнера */
@@ -138,8 +140,8 @@ button:hover {
 }
 
 .clear-button img {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 30px;
     opacity: 0.7;
     transition: opacity 0.3s ease;
 }
