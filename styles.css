@@ -103,6 +103,7 @@ button:hover {
     .container {
         margin: 1rem;
         padding: 1rem;
+        max-width:70%;
     }
 
     .images {
